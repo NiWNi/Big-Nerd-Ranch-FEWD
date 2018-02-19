@@ -57,7 +57,6 @@ a {
 .thumbnail-item {
     display: block;
     display: inline-block;
-    width: 120px;
     min-width: 120px;
     max-width: 120px;
     border: 1px solid rgb(100%, 100%, 100%);
@@ -117,4 +116,25 @@ a {
     color: white;
     text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
     font-size: 40px;
+}
+
+@media all and (min-width: 768px) {
+    .main-content{
+        flex-direction: row;
+        overflow: hidden;
+    }
+    
+    .thumbnail-list {
+        flex-direction: column;
+        order: 0;
+        margin-left: 20px;
+    }
+
+    .thumbnail-item {
+        max-width: 260px;
+    }
+
+    .thumbnail-item + .thumbnail-item {
+        margin-top: 20px;
+    }
 }
